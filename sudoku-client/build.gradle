@@ -1,0 +1,20 @@
+group 'com.p12v.sudoku'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.p12v.sudoku:sudoku-logic-solver:0.1.0-SNAPSHOT'
+}
+
+task execute(type:JavaExec) {
+    main = "com.p12v.logic.java.Launcher"
+    classpath = sourceSets.main.runtimeClasspath
+}
